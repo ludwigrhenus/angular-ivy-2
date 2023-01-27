@@ -5,11 +5,19 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { CommonModule } from '@angular/common';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, BrowserModule],
-  declarations: [AppComponent, HeroesComponent, HeroDetailComponent],
-  bootstrap: [AppComponent, HeroesComponent, HeroDetailComponent],
+  imports: [FormsModule, BrowserModule],
+  declarations: [
+    AppComponent,
+    HeroesComponent,
+    HeroDetailComponent,
+    MessagesComponent,
+  ],
+  providers: [
+    // no need to place any providers due to the `providedIn` flag...
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
